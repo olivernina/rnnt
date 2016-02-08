@@ -1,0 +1,3 @@
+[submodule "caffe-fcnt"]
+	path = caffe-fcnt
+	url = https://github.com/scott89/caffe-fcnt.git
