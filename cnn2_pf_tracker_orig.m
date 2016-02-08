@@ -294,7 +294,7 @@ for im2_id = im1_id:50%fnum
         pf_param = reestimate_param(pf_param);
     end
     
-    saveas(gcf,[ pwd '/' tracker_param.result_path '/' num2str(im2_id)  '.png']);
+    saveas(gcf,[ tracker_param.result_path '/' num2str(im2_id)  '.png']);
 end
 % track_res = 'results'+videoid;
 

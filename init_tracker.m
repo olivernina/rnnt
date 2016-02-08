@@ -1,9 +1,9 @@
-function tracker_param = init_tracker(data_path, seq_name)
+function tracker_param = init_tracker(data_path, seq_name,version)
 %% particle filter parameters
 pf_param = struct('affsig', [10,10,.004,.00,0.00,0], 'p_sz', 64,...
             'p_num', 600, 'mv_thr', 0.1, 'up_thr', 0.35, 'roi_scale', 2);
 %% check if sequence exists
-seq_path = [data_path seq_name '/'];
+seq_path = [data_path '/videos/' seq_name '/'];
 if ~isdir(seq_path)
     error('Sequence %s does not exist!', seq_name);
 end
@@ -46,7 +46,7 @@ tracker_param.gnet_solver_def_file = ['solver/gnet_solver_' num2str(tracker_para
 tracker_param.snet_solver_def_file = ['solver/snet_solver_' num2str(tracker_param.ch_num) '.prototxt']; 
 
 %% results path 
-tracker_param.result_path = ['results/' seq_name];
+tracker_param.result_path = [data_path '/results/' version '/' seq_name];
 if ~isdir(tracker_param.result_path)
     mkdir(tracker_param.result_path);
 end
