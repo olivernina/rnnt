@@ -1,8 +1,8 @@
 addpath('caffe-fcnt/matlab/caffe/', 'util');
-data_root = ['/media/olired/tracking/'];
-data_path = ['/media/olired/tracking/videos/']
+data_root = ['/media/onina/SSD/projects/tracking/'];
+data_path = ['/media/onina/SSD/projects/tracking/videos/']
 % seq_name = 'MotorRolling';
-version = 'orig';
+version = 'version1';
 videos = dir(data_path);
 videos = videos(3:end);
 
