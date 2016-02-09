@@ -1,4 +1,4 @@
-function  position = cnn2_pf_tracker_debug(tracker_param)
+function  position = cnn2_pf_tracker_ver1(tracker_param)
 
 load_tracker_param;
 caffe('presolve_gnet');
