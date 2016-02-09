@@ -92,7 +92,7 @@ close all;
 
 position = zeros(6, fnum);
 best_geo_param = loc2affgeo(location, pf_param.p_sz);
-for im2_id = im1_id:50%fnum
+for im2_id = im1_id:fnum
     s_distractor = false;
     g_distractor = false;
     caffe('set_phase_test');
@@ -294,7 +294,7 @@ for im2_id = im1_id:50%fnum
         pf_param = reestimate_param(pf_param);
     end
     
-    saveas(gcf,[ pwd '/' tracker_param.result_path '/' num2str(im2_id)  '.png']);
+    saveas(gcf,[ tracker_param.result_path '/' num2str(im2_id)  '.png']);
 end
 % track_res = 'results'+videoid;
 
